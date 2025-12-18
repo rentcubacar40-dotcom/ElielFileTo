@@ -15,7 +15,7 @@ MAX_CONCURRENT_PROCESSES = 1
 CPU_USAGE_LIMIT = 80
 
 # ✅ Tamaño máximo de archivos configurable
-MAX_FILE_SIZE_MB = 2000
+MAX_FILE_SIZE_MB = 4000
 MAX_FILE_SIZE = MAX_FILE_SIZE_MB * 1024 * 1024
 
 # ⬇️ Configuración para descarga rápida

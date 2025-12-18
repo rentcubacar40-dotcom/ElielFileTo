@@ -38,7 +38,7 @@ async def start_command(client, message):
         
         welcome_text = f"""👋 **Bienvenido/a {user.first_name}!**
 
-🤖 File2Link Bot - Sistema de Gestión de Archivos por Carpetas
+🤖 FileToLink_Eliel - Sistema de Gestión de Archivos por Carpetas
 
 **📁 SISTEMA DE CARPETAS:**
 `/cd downloads` - Acceder a archivos de descarga

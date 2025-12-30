@@ -19,30 +19,11 @@ sysctl -w net.core.wmem_max=16777216 2>/dev/null || true
 echo "  ✓ Buffers TCP optimizados"
 
 # ===========================================
-# FASE 2: VERIFICACIÓN DE VARIABLES DE ENTORNO
+# FASE 2: CONFIGURACIÓN DIRECTA
 # ===========================================
 
-echo "🔧 Verificando variables de entorno..."
-
-if [ -z "$BOT_TOKEN" ]; then
-    echo "❌ ERROR: BOT_TOKEN no configurado"
-    echo "   Configúralo en Render.com → Environment Variables"
-    exit 1
-fi
-
-if [ -z "$API_ID" ]; then
-    echo "❌ ERROR: API_ID no configurado"
-    echo "   Configúralo en Render.com → Environment Variables"
-    exit 1
-fi
-
-if [ -z "$API_HASH" ]; then
-    echo "❌ ERROR: API_HASH no configurado"
-    echo "   Configúralo en Render.com → Environment Variables"
-    exit 1
-fi
-
-echo "✅ Todas las variables de entorno configuradas"
+echo "🔧 Usando configuración directa desde main.py..."
+echo "✅ No se requieren variables de entorno externas"
 
 # ===========================================
 # FASE 3: INICIO DE LA APLICACIÓN
@@ -54,6 +35,13 @@ echo "   • Buffer: 128KB"
 echo "   • Timeout: 1 hora"
 echo "   • Reintentos: 3"
 echo "==========================================="
+
+# Verificar que el archivo principal existe
+if [ ! -f "main.py" ]; then
+    echo "❌ ERROR: No se encuentra main.py"
+    echo "   Asegúrate de que el archivo exista en el directorio"
+    exit 1
+fi
 
 # Ejecutar el bot
 exec python main.py

@@ -1,9 +1,9 @@
 import os
 
 # ===== CONFIGURACIÓN OPTIMIZADA =====
-API_ID = int(os.getenv("API_ID", "12345678"))
-API_HASH = os.getenv("API_HASH", "tu_api_hash")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "tu_bot_token")
+API_ID = int(os.getenv("API_ID", "20534584"))
+API_HASH = os.getenv("API_HASH", "6d5b13261d2c92a9a00afc1fd613b9df")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8586493247:AAHGxhgaev-RGdoNlHVtFLyKW1KGHmoADcA")
 RENDER_DOMAIN = os.getenv("RENDER_DOMAIN", "https://elielfiile.onrender.com")
 BASE_DIR = "storage"
 PORT = int(os.getenv("PORT", 8080))

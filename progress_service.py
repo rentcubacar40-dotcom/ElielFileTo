@@ -9,7 +9,7 @@ class ProgressService:
     def create_progress_bar(self, current, total, bar_length=15):
         """Crea una barra de progreso visual en una sola línea"""
         if total == 0:
-            return "[⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡] 0.0%"
+            return "[⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡⬡] 0.0%"
         
         percent = min(100.0, float(current) * 100 / float(total))
         filled_length = int(round(bar_length * current / float(total)))
